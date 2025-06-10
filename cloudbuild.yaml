@@ -1,0 +1,16 @@
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'gcr.io/$PROJECT_ID/map-publish-app', '.']
+
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'gcr.io/$PROJECT_ID/map-publish-app']
+
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  entrypoint: gcloud
+  args: [
+    'run', 'deploy', 'map-publish-app',
+    '--image', 'gcr.io/$PROJECT_ID/map-publish-app',
+    '--region', 'asia-northeast1',
+    '--platform', 'managed',
+    '--allow-unauthenticated',
+    '--port', '8080'
+  ]
