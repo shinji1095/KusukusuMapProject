@@ -1,4 +1,5 @@
-Django>=4.0
+Django==5.2.2
+django-cors-headers==3.14.0
 gunicorn
 python-dotenv
 folium==0.19.7
