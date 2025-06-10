@@ -321,7 +321,7 @@ def get_route_with_crosswalk(
     t0 = time.time()
     route_poly_raw = route_data["routes"][0]["overview_polyline"]["points"]
     decoded_poly = polyline.decode(route_poly_raw)
-    total_duration = route_data["routes"][0]["legs"][0]["duration"]["value"]  # 秒数
+    total_duration = route_data["routes"][0]["legs"][0]["duration"]["value"] 
     decode_time = time.time() - t0
     if debug_logs is not None:
         debug_logs.append(f"Decoded polyline: {len(route_poly_raw)} points. Time: {decode_time:.3f} sec")

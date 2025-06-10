@@ -19,8 +19,6 @@ ROOT_URLCONF = "config.urls"
 
 WSGI_APPLICATION = "config.wsgi.application"
 
-# DATABASES = {"default": {"ENGINE": "django.db.backends.sqlite3", "NAME": BASE_DIR / "db.sqlite3"}}
-
 USE_TZ = True
 
 LOG_DIR = os.path.join(BASE_DIR, "log")
@@ -49,7 +47,7 @@ LOGGING = {
             "level": "ERROR",
             "propagate": True,
         },
-        "map_publish_app": {  # Django アプリ名が app の場合
+        "map_publish_app": { 
             "handlers": ["file"],
             "level": "ERROR",
             "propagate": True,
