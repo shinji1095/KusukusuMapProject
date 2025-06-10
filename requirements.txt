@@ -1,0 +1,9 @@
+Django>=4.0
+gunicorn
+python-dotenv
+folium==0.19.7
+polyline==2.0.2
+requests
+geopy==2.4.1
+scikit-learn==1.6.1
+shapely==2.1.1
