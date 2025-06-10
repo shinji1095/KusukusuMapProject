@@ -12,4 +12,4 @@ ENV PYTHONPATH=/app
 ENV DJANGO_SETTINGS_MODULE=config.settings
 ENV DJANGO_COLLECTSTATIC=0
 
-CMD ["gunicorn", "config.wsgi:application", "--bind", "0.0.0.0:8080"]
+CMD ["gunicorn", "config.wsgi:application", "--bind", "0.0.0.0:8080", "--timeout", "60"]
