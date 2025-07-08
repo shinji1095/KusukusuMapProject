@@ -62,5 +62,6 @@ LOGGING = {
 
 CORS_ALLOW_ALL_ORIGINS = True
 # CORS_ALLOWED_ORIGINS = [
-#     "https://100.94.88.14:5173",
+#     # "https://100.94.88.14:5173",
+#     "*"
 # ]
